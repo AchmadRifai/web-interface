@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Job Name</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let job of jobs;index as i">
+      <td>{{i+1}}</td>
+      <td>{{job}}</td>
+      <td><app-logs [jobName]="job"/></td>
+    </tr>
+  </tbody>
+</table>

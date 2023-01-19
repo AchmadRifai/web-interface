@@ -1,0 +1,12 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Logs {{jobName}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body" style="height: 250px">
+        <div #scroll class="overflow-auto h-100 d-inline-block">
+            <p #item *ngFor="let s of logs">{{s}}</p>
+        </div>
+    </div>
+</ng-template>
+<button (click)="open(content)" class="btn btn-lg btn-outline-primary">Show {{jobName}} Logs</button>
